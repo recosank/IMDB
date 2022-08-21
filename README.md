@@ -46,4 +46,5 @@ IMDB is an IMDB-clone made with MERN stack to rate upcoming or current movies.
 
 * Watchlist (only IMDB users can add and remove watchlist)
 
-![watch](https://user-images.githubusercontent.com/52545996/185787239-88754098-9936-4b1f-8179-77a671630e6f.png)
+![watchl](https://user-images.githubusercontent.com/52545996/185787742-c22dc534-a2fa-416a-97a4-45827025e41a.png)
+
