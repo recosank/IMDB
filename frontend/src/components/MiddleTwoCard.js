@@ -190,7 +190,7 @@ const MiddleTwoCard = ({ img, wl }) => {
         )}
         <Button
           variant="text"
-          sx={{ fontSize: "0.7rem", color: "white", marginTop: "7px" }}
+          sx={{ fontSize: "0.9rem", color: "white", marginTop: "7px" }}
           startIcon={<PlayArrowSharpIcon />}
         >
           trailer

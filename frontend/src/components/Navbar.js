@@ -44,7 +44,7 @@ const Navbar = () => {
     settop(!topp);
   };
   const handleSignup = () => {
-    isSignup ? setOpen((p) => !p) : navi("/signup");
+    isSignup ? setOpen((p) => !p) : navi("/join");
   };
   const handleClickAway = () => {
     setOpen(false);

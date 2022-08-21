@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Chip,
   Stack,
@@ -8,14 +9,24 @@ import {
   Grid,
   Divider,
 } from "@mui/material";
-import React from "react";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import TrendingDownOutlinedIcon from "@mui/icons-material/TrendingDownOutlined";
-import BottomCard from "./BottomCard";
-import Cast from "./cast";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import Cast from "./cast";
 import play from "../images/play.png";
+import brie from "../images/brie.jpg";
+import jim from "../images/jim.jpg";
+import leonardo from "../images/leonardo.jpg";
+import rami from "../images/rami.jpg";
+import robert from "../images/robert.jpg";
+import roony from "../images/roony.jpg";
+import scralet from "../images/scralet.jpg";
+import tom from "../images/tom.jpg";
+import jax from "../images/jax.jpg";
+import tara from "../images/tara.jpg";
+import kennue from "../images/kennue.jpg";
+import methew from "../images/methew.jpg";
 
 const TrailerModal = ({ fc, data }) => {
   console.log(data);
@@ -225,33 +236,47 @@ const TrailerModal = ({ fc, data }) => {
                   color="#bababa"
                   sx={{ borderLeft: "3px solid yellow" }}
                 >
-                  Top cast{" "}
+                  Top cast
                 </Typography>
               </Grid>
               <Grid item xs={6} height="98%">
                 <Stack mt={4} spacing={4}>
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
+                  <Cast as="Elio periman" nam="Timothée Chalamet" img={tom} />
+                  <Cast
+                    as="Natasha Romanoff"
+                    nam="scarlett johansson"
+                    img={scralet}
+                  />
+                  <Cast as="Elliot Alderson" nam="Rami Malek" img={rami} />
+                  <Cast as="Lisbeth Salander" nam="rooney mara" img={roony} />
+                  <Cast as="Sheldon Cooper" nam="jim parsons" img={jim} />
+                  <Cast as="Tony Stark" nam="Robert Downey Jr." img={robert} />
+                  <Cast as="john wick" nam="Keanu Reeves" img={kennue} />
+                  <Cast as="Tara Knowles" nam="Maggie Siff" img={tara} />
                 </Stack>
               </Grid>
               <Grid item xs={6} height="98%">
                 <Stack mt={4} spacing={4}>
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
-                  <Cast />
+                  <Cast as="Elliot Alderson" nam="Rami Malek" img={rami} />
+                  <Cast as="Lisbeth Salander" nam="rooney mara" img={roony} />
+                  <Cast
+                    as="Jordan Belfort"
+                    nam="leonardo dicaprio"
+                    img={leonardo}
+                  />
+                  <Cast
+                    as="Mark Hanna"
+                    nam="Matthew McConaughey"
+                    img={methew}
+                  />
+                  <Cast as="Elio periman" nam="Timothée Chalamet" img={tom} />
+                  <Cast
+                    as="Natasha Romanoff"
+                    nam="scarlett johansson"
+                    img={scralet}
+                  />
+                  <Cast as="Carol Danvers" nam="Brie Larson" img={brie} />
+                  <Cast as="Jax Teller" nam="Charlie Hunnam" img={jax} />
                 </Stack>
               </Grid>
             </Grid>

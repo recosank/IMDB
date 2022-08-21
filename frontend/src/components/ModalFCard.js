@@ -5,15 +5,7 @@ import play from "../images/play.png";
 
 const ModalFCard = ({ imgg }) => {
   return (
-    <Grid
-      container
-      ml={4}
-      height="100%"
-      sx={{ border: "0px solid red", bgcolor: "black" }}
-    >
-      {
-        // /xs={2.7}
-      }
+    <Grid container ml={4} height="100%" sx={{ bgcolor: "black" }}>
       <Grid item xs={12} height="60%">
         <img
           src={`data:image/png;base64,${imgg ? imgg.MImage.data : " "}`}
@@ -31,8 +23,8 @@ const ModalFCard = ({ imgg }) => {
           }}
         />
       </Grid>
-      <Grid item xs={12} height="40%">
-        <Typography variant="p" sx={{ marginTop: "5%", color: "white" }}>
+      <Grid item xs={12} mt={2} height="40%">
+        <Typography variant="p" sx={{ color: "white" }}>
           Official Trailer
         </Typography>
         <Typography pt={1} sx={{ fontSize: "15px", color: "gray" }}>

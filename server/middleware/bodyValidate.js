@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-import {body} from 'express-validator'
-
-const bodyValidator = (method) => {
-    switch (method) {
-        case 'signupuser':
-            console.log('asdfadg')
-            console.log(body)
-            return [
-                body('email','Invalid email').exists({checkFalsy:true}).isEmail(),
-                body('name','name must required').exists({checkFalsy:true}).isAlphanumeric().isLength({min: 3,max:30}).withMessage('name must be between 3 and 30 characters')  
-            ]    
-        default:
-            return null        
-                
-            
-    }
-
-}
-
-export default bodyValidator;
-=======
 import { body } from "express-validator";
 
 const bodyValidator = (method) => {
   switch (method) {
     case "signupuser":
-      console.log(body);
       return [
         body("email", "Invalid email").exists({ checkFalsy: true }).isEmail(),
         body("name", "name must required")
@@ -40,4 +17,3 @@ const bodyValidator = (method) => {
 };
 
 export default bodyValidator;
->>>>>>> 806d995 (fix trailer issue)

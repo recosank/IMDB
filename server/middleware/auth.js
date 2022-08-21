@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
+import { env } from "../utils/enviroment.js";
 
-const secret =
-  "asjkdfa5s4df658ar64f3a54f5425253456544@#%@%^%$^!#$%@#RCFDSVV#$%";
+const secret = env.SECRET_JWT;
 
 const auth = (req, res, next) => {
   try {
@@ -12,9 +12,7 @@ const auth = (req, res, next) => {
     req.userId = decodedData.id;
     next();
   } catch (error) {
-    console.log(error.name);
     if (error.name === "TypeError") {
-      console.log("nope");
       let data = {
         message: "not authorized",
       };
@@ -29,4 +27,3 @@ const auth = (req, res, next) => {
 };
 
 export default auth;
-

@@ -19,9 +19,7 @@ const Banner = () => {
   banner = useSelector((state) => state.trailers.banner);
   const totalBanner = banner.length;
   let { watchlist } = useSelector((state) => state.trailers);
-  chkWl = banner[ind]
-    ? watchlist.findIndex((el) => el._id === banner[ind]._id)
-    : -1;
+  chkWl = watchlist.findIndex((el) => el._id === banner[ind]._id);
   const lefthandle = () => {
     if (ind <= 0) {
       return null;
@@ -41,7 +39,6 @@ const Banner = () => {
     const data = { id: banner[ind] };
     dispatch(addWatchAction(data));
   };
-
   return (
     <Box
       display="flex"
@@ -107,14 +104,12 @@ const Banner = () => {
             mr={1.5}
             display="block"
             sx={{
-              backgroundImage: `url(data:image/png;base64,${
-                banner[ind] ? banner[ind].PImage.data : ""
-              })`,
+              backgroundImage: `url(data:image/png;base64,${banner[ind].PImage.data})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               height: "98%",
-              width: "40%",
+              width: "60%",
             }}
           >
             <img
@@ -158,9 +153,15 @@ const Banner = () => {
             <Typography
               ml={2}
               color="white"
-              sx={{ fontSize: "1.7rem", width: "70%" }}
+              sx={{ fontSize: "2.3rem", lineHeight: "1", width: "70%" }}
             >
-              {banner[ind] ? banner[ind].title : ""}
+              {banner[ind].title}
+              <Typography
+                color="#A0A0A0"
+                sx={{ fontSize: "1.4rem", width: "70%" }}
+              >
+                {banner[ind].context}
+              </Typography>
             </Typography>
           </Box>
         </Box>

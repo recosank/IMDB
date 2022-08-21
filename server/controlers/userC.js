@@ -1,18 +1,17 @@
-import userDb from "./../models/userModel.js"
-import watchlistDb from './../models/watchlistModel.js'
-import bcrypt from 'bcryptjs';
+import userDb from "./../models/userModel.js";
+import watchlistDb from "./../models/watchlistModel.js";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import fs from 'fs'
+import fs from "fs";
 import path from "path";
-import { __dirname } from './../index.js'
+import { __dirname } from "./../index.js";
 import bannerModelDb from "../models/trailersModel.js";
 import { validationResult } from "express-validator";
+import { env } from "../utils/enviroment.js";
 
-const secret =
-  "asjkdfa5s4df658ar64f3a54f5425253456544@#%@%^%$^!#$%@#RCFDSVV#$%";
+const secret = env.SECRET_JWT;
 
 export const signupUser = async (req, res) => {
-  console.log(req.body);
   try {
     const errors = validationResult(req);
 
@@ -80,7 +79,6 @@ export const signinUser = async (req, res) => {
 };
 
 export const updateProfile = async (req, res) => {
-  console.log(req.body);
   try {
     const { id } = req.body;
     let watchlist = await watchlistDb.findOne({ userId: req.userId }); //.populate('watchlist')
@@ -92,7 +90,6 @@ export const updateProfile = async (req, res) => {
         return val._id.toString() == id.toString();
       })
     ) {
-      console.log("pll");
       await watchlistDb.findOneAndUpdate(
         { userId: req.userId },
         {
@@ -105,7 +102,6 @@ export const updateProfile = async (req, res) => {
 
       res.status(204).json({ message: "removed successfully" });
     } else {
-      console.log("psh");
       await watchlistDb.findOneAndUpdate(
         { userId: req.userId },
         {
@@ -122,4 +118,3 @@ export const updateProfile = async (req, res) => {
     console.log(error);
   }
 };
-

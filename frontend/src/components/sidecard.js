@@ -70,10 +70,19 @@ const SideCard = ({ img }) => {
           pt={1}
           sx={{
             textTransform: "none",
-            fontSize: "1rem",
+            fontSize: "1.03rem",
           }}
         >
           {img.title}
+          <Typography
+            color="#A0A0A0"
+            sx={{
+              textTransform: "none",
+              fontSize: "0.9rem",
+            }}
+          >
+            {img.context}
+          </Typography>
         </Typography>
       </Box>
       <StyledModal

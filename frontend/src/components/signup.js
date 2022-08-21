@@ -46,7 +46,14 @@ const Signup = () => {
         borderBottom: "1px solid lightgray",
       }}
     >
-      <img src={signlogo} style={{ width: "7%", margin: "2% 0%" }} />
+      <img
+        src={signlogo}
+        style={{
+          width: "5%",
+          margin: "2% 0%",
+          boxShadow: "10px 10px 5px lightgrey",
+        }}
+      />
       <Box
         display="flex"
         flexShrink={2}
@@ -58,12 +65,11 @@ const Signup = () => {
           borderRadius: "9px",
           fontSize: "0.8rem",
           width: "16%",
-          boxShadow: 2,
+          boxShadow: "8px 8px 8px lightgray",
           border: "1px solid lightgray",
         }}
       >
-        <Typography sx={{ fontSize: "30px" }}>
-          {" "}
+        <Typography sx={{ fontSize: "27px" }}>
           {isSignup ? "Create account" : "login"}
         </Typography>
         {isSignup ? (
@@ -74,7 +80,7 @@ const Signup = () => {
                 <input
                   type="file"
                   name="pfimg"
-                  style={{ margin: "3% 0px" }}
+                  style={{ margin: "3% 0px", borderRadius: "15px" }}
                   onChange={oo}
                 />
                 <button
@@ -94,9 +100,10 @@ const Signup = () => {
               <>
                 <Input
                   name="name"
-                  lable="Name"
+                  lable="Username"
                   value={userdata.name}
                   onChg={tt}
+                  ph="First and last name"
                   type="text"
                 />
                 <Input
@@ -109,6 +116,7 @@ const Signup = () => {
                 <Input
                   name="password"
                   lable="Password"
+                  ph="at least 8 characters"
                   value={userdata.password}
                   onChg={tt}
                   type="password"
@@ -123,14 +131,18 @@ const Signup = () => {
                 <button
                   onClick={handleNext}
                   style={{
-                    backgroundColor: "lightyellow",
                     marginTop: "1.4rem",
                     width: "100%",
-                    height: "1.8rem",
-                    borderRadius: "23px",
+                    height: "1.9rem",
+                    borderRadius: "8px",
+                    color: "white",
+                    fontSize: "15px",
+                    fontWeight: "bold",
+                    background:
+                      "linear-gradient(to bottom, transparent 0%,black 85% )",
                   }}
                 >
-                  done
+                  Join IMDB
                 </button>
               </>
             )}
@@ -187,7 +199,7 @@ const Signup = () => {
           <Button
             variant="text"
             onClick={handleAccounts}
-            sx={{ textTransform: "none", height: "1rem", fontSize: "0.6rem" }}
+            sx={{ textTransform: "none", height: "1rem", fontSize: "0.8rem" }}
           >
             <p>{isSignup ? "sign-In" : "sign-up"}</p>
           </Button>

@@ -10,7 +10,7 @@ const Bottom = () => {
 
   return (
     <Box
-      sx={{ border: "0px solid red", width: "100%" }}
+      sx={{ width: "100%" }}
       mt={6}
       flexDirection="column"
       display={born.length !== 0 ? "flex" : "none"}
