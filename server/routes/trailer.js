@@ -23,20 +23,19 @@ const imgStorage = multer.diskStorage({
 const upload = multer({ storage: imgStorage });
 
 const router = express.Router();
-router.get("/p", auth, getAll);
+router.get("/gettrailer", auth, getAll);
 router.post(
-  "/p",
+  "/addtrailer",
   upload.fields([
     { name: "MImage", maxCount: 1 },
     { name: "PImage", maxCount: 1 },
   ]),
   getTrailer
 );
-
-router.post("/f", upload.single("FImage"), getToday);
-router.post("/a", upload.single("AImage"), getAvatar);
+router.post("/addtoday", upload.single("FImage"), getToday);
+router.post("/addavatar", upload.single("AImage"), getAvatar);
 router.post("/signup", upload.single("pfimg"), signupUser);
 router.post("/signin", upload.single("pfimg"), signinUser);
-router.patch("/pu", auth, updateProfile);
+router.patch("/update", auth, updateProfile);
 router.patch("/rating", auth, ratingUpdate);
 export default router;
