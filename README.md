@@ -30,7 +30,7 @@ IMDB is an IMDB-clone made with MERN stack to rate upcoming or current movies.
 
 * Most rated movies
 
-![fav](https://user-images.githubusercontent.com/52545996/185787065-9e774f57-1f79-4945-b186-47158da5102b.png)
+![fav](https://user-images.githubusercontent.com/52545996/185787916-04744ce6-9e56-4d77-beaa-a1906877b9b6.png)
 
 * About
 
@@ -46,5 +46,7 @@ IMDB is an IMDB-clone made with MERN stack to rate upcoming or current movies.
 
 * Watchlist (only IMDB users can add and remove watchlist)
 
-![watchl](https://user-images.githubusercontent.com/52545996/185787742-c22dc534-a2fa-416a-97a4-45827025e41a.png)
+![watch](https://user-images.githubusercontent.com/52545996/185787966-e32af791-5f3e-4af6-b810-e205eee22a11.png)
+
+
 
